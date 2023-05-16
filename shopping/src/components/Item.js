@@ -17,6 +17,7 @@ function Item({products}) {
           </div>
           <div className="bottomLine">
             <div>{product.price || product.follower}</div>
+            <div>{product.sub_title}</div>
           </div>
         </div>
       ))}
