@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import "../styles/Header.css";
 import {Link} from "react-router-dom";
 
@@ -20,8 +20,12 @@ function Header() {
       <ul className={isOpen ? "show-menu" : "hide-menu"}>
         <span className="menuList">
           <li>OOO님, 안녕하세요!</li>
-          <li>🎁 상품리스트 페이지</li>
-          <li>💜 북마크 페이지</li>
+          <Link to="/products/list" style={{textDecoration: "none"}}>
+            <li>🎁 상품리스트 페이지</li>
+          </Link>
+          <Link to="/bookmark" style={{textDecoration: "none"}}>
+            <li>💜 북마크 페이지</li>
+          </Link>
         </span>
       </ul>
     </div>
