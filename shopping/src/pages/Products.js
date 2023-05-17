@@ -20,7 +20,7 @@ function Products() {
   }, []);
 
   return (
-    <div className="main">
+    <div className="productList">
       <Item products={products} />
     </div>
   );
