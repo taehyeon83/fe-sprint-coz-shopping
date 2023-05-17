@@ -1,4 +1,33 @@
 .image {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 250px;
+  border-radius: 12px;
+}
+
+.productListTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-left: 100px;
+}
+.product,
+.topLine,
+.priceAndfollwer,
+.subTitle {
+  display: flex;
+}
+.product {
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.topLine {
+  justify-content: space-between;
+}
+.priceAndfollwer {
+  justify-content: flex-end;
+}
+
+.subTitle {
+  justify-content: flex-start;
 }
