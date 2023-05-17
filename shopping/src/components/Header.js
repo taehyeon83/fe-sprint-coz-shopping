@@ -20,10 +20,10 @@ function Header() {
       <ul className={isOpen ? "show-menu" : "hide-menu"}>
         <span className="menuList">
           <li>OOO님, 안녕하세요!</li>
-          <Link to="/products/list" style={{textDecoration: "none"}}>
+          <Link to="/products/list" className="menuLink">
             <li>🎁 상품리스트 페이지</li>
           </Link>
-          <Link to="/bookmark" style={{textDecoration: "none"}}>
+          <Link to="/bookmark" className="menuLink">
             <li>💜 북마크 페이지</li>
           </Link>
         </span>
