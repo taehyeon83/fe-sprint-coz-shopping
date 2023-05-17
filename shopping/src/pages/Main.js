@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
-import List from "../components/List";
+import Item from "../components/Item";
 
 function Main() {
   const [products, setProducts] = useState([]);
@@ -21,7 +21,8 @@ function Main() {
 
   return (
     <div className="main">
-      <List products={products} />
+      <span className="productListTitle">상품 리스트</span>
+      <Item products={products} />
     </div>
   );
 }
