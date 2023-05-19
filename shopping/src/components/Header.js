@@ -1,6 +1,8 @@
 import {useState} from "react";
 import "../styles/Header.css";
 import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [isOpen, setMenu] = useState(false);
@@ -24,7 +26,9 @@ function Header() {
             <li>🎁 상품리스트 페이지</li>
           </Link>
           <Link to="/bookmark" className="menuLink">
-            <li>💜 북마크 페이지</li>
+            <li>
+              <FontAwesomeIcon icon={faStar} style={{color: "#ffd361"}} /> 북마크 페이지
+            </li>
           </Link>
         </span>
       </ul>
