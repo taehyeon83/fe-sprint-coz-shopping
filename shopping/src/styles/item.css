@@ -1,18 +1,30 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
 .image {
-  width: 300px;
+  width: 350px;
   height: 250px;
   border-radius: 12px;
 }
 
-.productListTitle {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  margin-left: 100px;
+.bookmark-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
 }
+
+.bookmark-icon.bookmarked {
+  color: #ffd361;
+}
+
 .product,
 .topLine,
-.priceAndfollwer,
+.priceAndFollower,
 .subTitle {
   display: flex;
 }
@@ -24,7 +36,23 @@
 .topLine {
   justify-content: space-between;
 }
-.priceAndfollwer {
+
+.leftText,
+.rightText {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.discountPercentage {
+  color: #452cdd;
+}
+
+.followerCount {
+  color: black;
+}
+
+.priceAndFollower {
   justify-content: flex-end;
 }
 

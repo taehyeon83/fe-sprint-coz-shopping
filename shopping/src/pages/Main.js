@@ -21,8 +21,9 @@ function Main() {
 
   return (
     <div className="main">
-      <span className="productListTitle">상품 리스트</span>
+      <div className="productListTitle">상품 리스트</div>
       <Item products={products} />
+      <div className="bookMarkListTitle">북마크 리스트</div>
     </div>
   );
 }
