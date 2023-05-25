@@ -1,7 +1,6 @@
 import "../styles/Bookmark.css";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Item from "../components/Item";
-import {useEffect} from "react";
 import Filter from "../components/Filter";
 
 function Bookmark() {
@@ -16,16 +15,22 @@ function Bookmark() {
     }
   }, []);
 
-  const filterItemsByType = (type) => {
-    return bookmarkedItems.filter((item) => item.type === type);
-  };
-
   const getRandomItems = (array, numItems) => {
     const shuffled = array.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, numItems);
   };
 
   useEffect(() => {
+    const filterItemsByType = (type) => {
+      return bookmarkedItems.filter((item) => item.type === type);
+    };
+
+    const setFilteredRandomData = (type) => {
+      const filteredItems = filterItemsByType(type);
+      const randomItems = getRandomItems(filteredItems, 100);
+      setRandomData(randomItems);
+    };
+
     if (type === "Product") {
       setFilteredRandomData("Product");
     } else if (type === "Category") {
@@ -39,22 +44,14 @@ function Bookmark() {
     }
   }, [type, bookmarkedItems]);
 
-  const setFilteredRandomData = (type) => {
-    const filteredItems = filterItemsByType(type);
-    const randomItems = getRandomItems(filteredItems, 100);
-    setRandomData(randomItems);
-  };
-
   return (
     <div>
       <Filter type={type} setType={setType} />
-      <ul className="itemlist">
+      <ul className="itemList">
         {randomData.map((item) => (
           <Item key={item.id} {...item} />
-        ))}{" "}
+        ))}
       </ul>
-
-      <button onClick={() => console.log(bookmarkedItems)}>확인</button>
     </div>
   );
 }

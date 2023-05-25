@@ -33,7 +33,7 @@ function List() {
   }
 
   return (
-    <div className="mainlist">
+    <div className="mainList">
       <h2>상품리스트</h2>
       <ul className="itemlist">
         {data.map((item) => (

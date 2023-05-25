@@ -1,10 +1,10 @@
-.itemlist {
+.itemList {
   display: flex;
   gap: 14px;
   margin-left: -20px;
 }
 
-.mainlist {
+.mainList {
   padding: 10px;
 }
 

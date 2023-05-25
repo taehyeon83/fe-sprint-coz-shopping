@@ -1,16 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import "../styles/Item.css";
 import {useSelector, useDispatch} from "react-redux";
 import {addToBookmark, removeFromBookmark} from "../store";
-import {useState} from "react";
 
 function Item(props) {
   const {id} = props;
   const bookmarkedItems = JSON.parse(localStorage.getItem("bookmarkedItems")) || [];
-  const [modalOpen, setModalOpen] = useState(false);
   const [clickedImage, setClickedImage] = useState("");
   const existingItem = bookmarkedItems.find((item) => item.id === id);
   const bookmark = useSelector((state) => state.bookmark);
+  const [modalOpen, setModalOpen] = useState(false);
   const dispatch = useDispatch();
   console.log(bookmark);
   const handleBookmark = () => {
@@ -65,7 +64,7 @@ function Item(props) {
       </div>
       <div className="first-line">
         <div className="item-title">{props.type === "Brand" ? props.brand_name : props.type === "Category" ? "#" + props.title : props.title}</div>
-        <div className="right-elemnt">
+        <div className="right-element">
           {props.type === "Product" ? props.discountPercentage + "%" : null}
           {props.type === "Brand" ? "관심고객수" : null}
         </div>
