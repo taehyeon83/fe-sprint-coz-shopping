@@ -20,6 +20,14 @@
   justify-content: space-between;
 }
 
+.item-title {
+  font-weight: bolder;
+}
+
+.right-element {
+  color: #452cdd;
+}
+
 .whole-wrapper {
   position: relative;
 }
@@ -33,7 +41,6 @@
   font-size: 40px;
 }
 .custom-star {
-  /* 스타일을 원하는 대로 수정해주세요 */
   color: gold;
 }
 
@@ -43,7 +50,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  background-color: rgba(170, 5, 5, 0.5); /* 투명한 검은색 배경 */
+  background-color: rgba(170, 5, 5, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
