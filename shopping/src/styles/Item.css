@@ -1,0 +1,67 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.bookmark-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.image {
+  width: 450px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.first-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.whole-wrapper {
+  position: relative;
+}
+
+.bookmark-button {
+  position: absolute;
+  top: 90%;
+  left: 93%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+.custom-star {
+  /* 스타일을 원하는 대로 수정해주세요 */
+  color: gold;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgba(170, 5, 5, 0.5); /* 투명한 검은색 배경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 600px;
+}
+
+.modal-image {
+  width: 800px;
+  height: 600px;
+}
+
+.modal-bookmark-button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+}

@@ -1,0 +1,13 @@
+.itemlist {
+  display: flex;
+  gap: 14px;
+  margin-left: -20px;
+}
+
+.mainlist {
+  padding: 10px;
+}
+
+h2 {
+  margin-left: 20px;
+}
