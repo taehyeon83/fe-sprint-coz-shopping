@@ -1,9 +1,9 @@
-import {Button} from "./Button";
+import {Star} from "./Star";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 export default {
-  title: "Example/Button",
-  component: Button,
+  title: "Example/Star",
+  component: Star,
   argTypes: {
     backgroundColor: {control: "color"},
   },
@@ -13,12 +13,12 @@ export default {
 export const Primary = {
   args: {
     primary: true,
-    label: "Button",
+    label: "Star",
   },
 };
 
 export const Secondary = {
   args: {
-    label: "Button",
+    label: "Star",
   },
 };

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "../styles/Item.css";
+import {Star} from "../stories/Star/Star";
 import {useSelector, useDispatch} from "react-redux";
 import {addToBookmark, removeFromBookmark} from "../store";
 
@@ -58,7 +59,7 @@ function Item(props) {
         </div>
         <div className="bookmark-wrapper">
           <button className="bookmark-button" onClick={handleBookmark}>
-            <i className={`fas fa-star ${existingItem ? "custom-star" : ""}`}></i>
+            <Star className={`${existingItem ? "storybook-Star--primary" : "storybook-Star--secondary "}`}></Star>
           </button>
         </div>
       </div>
@@ -75,8 +76,9 @@ function Item(props) {
         <div className="modal">
           <img className="modal-image" src={clickedImage} alt="큰이미지" onClick={handleImageClick} />
           <button className="modal-bookmark-button" onClick={handleBookmark}>
-            <i className={`fas fa-star ${existingItem ? "custom-star" : ""}`}></i>
+            <Star className={`${existingItem ? "storybook-Star--primary" : "storybook-Star--secondary "}`}></Star>
           </button>
+          <div className="modal-title">{props.type === "Brand" ? props.brand_name : props.type === "Category" ? "#" + props.title : props.title}</div>
         </div>
       )}
     </div>

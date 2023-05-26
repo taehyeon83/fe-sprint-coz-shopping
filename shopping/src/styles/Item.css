@@ -9,8 +9,13 @@
   color: #000;
 }
 
+.item {
+  width: 400px;
+  height: 350px;
+}
+
 .image {
-  width: 450px;
+  width: 400px;
   height: 300px;
   border-radius: 10px;
 }
@@ -34,14 +39,11 @@
 
 .bookmark-button {
   position: absolute;
-  top: 90%;
-  left: 93%;
+  top: 89%;
+  left: 92%;
   width: 100%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-}
-.custom-star {
-  color: gold;
 }
 
 .modal {
@@ -50,12 +52,21 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  background-color: rgba(170, 5, 5, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 800px;
   height: 600px;
+}
+
+.modal-title {
+  position: absolute;
+  left: 11%;
+  bottom: 6%;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
 .modal-image {
@@ -65,10 +76,11 @@
 
 .modal-bookmark-button {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  left: 3%;
+  bottom: 5%;
+
   background: none;
   border: none;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
 }
